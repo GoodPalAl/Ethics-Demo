@@ -14,6 +14,7 @@ namespace SecureBallot
     public partial class SecureBallotMain : Form
     {
         private static Ballot ballot;
+        private static List<RadioButton> radioButtons;
         public SecureBallotMain()
         {
             InitializeComponent();
@@ -21,12 +22,20 @@ namespace SecureBallot
 
         private void SecureBallotMain_Load(object sender, EventArgs e)
         {
-            tb_no1.Text = getTextFromFile("Item1.txt");
-            tb_no2.Text = getTextFromFile("Item2.txt");
-            tb_no3.Text = getTextFromFile("Item3.txt");
-            tb_no4.Text = getTextFromFile("Item4.txt");
+            tb_ref_ques.Text = getTextFromFile("ItemRefQues.txt");
 
-            ballot = new Ballot(4);
+            ballot = new Ballot(3);
+            radioButtons = new List<RadioButton>();
+            radioButtons.Add(rb_mayor1);
+            radioButtons.Add(rb_mayor2);
+            radioButtons.Add(rb_mayor3);
+            radioButtons.Add(rb_mayor4);
+            radioButtons.Add(rb_cm1);
+            radioButtons.Add(rb_cm2);
+            radioButtons.Add(rb_cm3);
+            radioButtons.Add(rb_cm4);
+            radioButtons.Add(rb_rq_yes);
+            radioButtons.Add(rb_rq_no);
         }
 
         private string getTextFromFile(string filename)
@@ -39,71 +48,114 @@ namespace SecureBallot
             return text;
         }
 
+        private void button_clear_Click(object sender, EventArgs e)
+        {
+            foreach (RadioButton SelectedButton in radioButtons)
+                SelectedButton.Checked = false;
+
+            ballot.Clear();
+        }
+
         private void button_cast_vote_Click(object sender, EventArgs e)
         {
-            if (ballot.isBallotFilled())
+            StringBuilder message = new StringBuilder();
+            if (!ballot.isBallotFilled())
             {
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(
-                    "Are you sure you would like to cast your vote?\nThis action can not be undone.", 
-                    "WARNING", buttons);
-                if (result == DialogResult.Yes)
-                {
-                    this.Close();
-                    MessageBox.Show("Your vote has been cast!");
-                    Application.Exit();
-                }
+                message.Append("YOU HAVE UNSELECTED OPTIONS ON YOUR BALLOT!\n");
             }
-            else
+            message.Append("Are you sure you would like to cast your vote?\nThis action can not be undone.");
+
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message.ToString(), "WARNING", buttons);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("You still have unselected options on your ballot:\n" +
-                    ballot.getUncountedSelections());
+                this.Close();
+                MessageBox.Show("Your vote has been cast!\nTo track your ballot's verification process, visit https://www.tampa.gov.");
+                Application.Exit();
             }
         }
 
-        private void rb_no1_yes_CheckedChanged(object sender, EventArgs e)
+        private void rb_mayor1_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(1, Vote.Yes);
+            ballot.castVote(1, new Candidate(1));
         }
 
-        private void rb_no1_no_CheckedChanged(object sender, EventArgs e)
+        private void rb_mayor2_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(1, Vote.No);
+            ballot.castVote(1, new Candidate(2));
         }
 
-        private void rb_no2_yes_CheckedChanged(object sender, EventArgs e)
+        private void rb_mayor3_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(2, Vote.Yes);
+            ballot.castVote(1, new Candidate(3));
         }
 
-        private void rb_no2_no_CheckedChanged(object sender, EventArgs e)
+        private void rb_mayor4_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(2, Vote.No);
+            ballot.castVote(1, new Candidate(4));
         }
 
-        private void rb_no3_yes_CheckedChanged(object sender, EventArgs e)
+        private void rb_cm1_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(3, Vote.Yes);
+            ballot.castVote(2, new Candidate(1));
         }
 
-        private void rb_no3_no_CheckedChanged(object sender, EventArgs e)
+        private void rb_cm2_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(3, Vote.No);
+            ballot.castVote(2, new Candidate(2));
         }
 
-        private void rb_no4_yes_CheckedChanged(object sender, EventArgs e)
+        private void rb_cm3_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(4, Vote.Yes);
+            ballot.castVote(2, new Candidate(3));
         }
 
-        private void rb_no4_no_CheckedChanged(object sender, EventArgs e)
+        private void rb_cm4_CheckedChanged(object sender, EventArgs e)
         {
-            ballot.castVote(4, Vote.No);
+            ballot.castVote(2, new Candidate(4));
+        }
+
+        private void rb_rq_yes_CheckedChanged(object sender, EventArgs e)
+        {
+            ballot.castVote(3, new YesNo(true));
+        }
+
+        private void rb_rq_no_CheckedChanged(object sender, EventArgs e)
+        {
+            ballot.castVote(3, new YesNo(false));
         }
     }
-    public enum Vote
+    public class Vote
     {
-        Yes, No, Uncounted
+        protected bool counted;
+        public Vote()
+        {
+            counted = false;
+        }
+        public bool Counted()
+        {
+            return counted;
+        }
+    }
+    public class YesNo : Vote
+    {
+        private bool vote;
+
+        public YesNo(bool vote)
+        {
+            this.vote = vote;
+            counted = true;
+        }
+    }
+    public class Candidate : Vote
+    {
+        private int can_num;
+
+        public Candidate(int candidate)
+        {
+            can_num = candidate;
+            counted = true;
+        }
     }
 
     public class Ballot
@@ -116,7 +168,15 @@ namespace SecureBallot
 
             for (int i = 1; i <= size; ++i)
             {
-                votes.Add(i, Vote.Uncounted);
+                votes.Add(i, new Vote());
+            }
+        }
+
+        public void Clear()
+        {
+            for (int i = 1; i <= votes.Count; ++i)
+            {
+                votes[i] = new Vote();
             }
         }
 
@@ -129,34 +189,11 @@ namespace SecureBallot
         {
             foreach (KeyValuePair<int, Vote> v in votes)
             {
-                if (v.Value == Vote.Uncounted)
+                if (!v.Value.Counted())
                     return false;
             }
 
             return true;
-        }
-
-        public string getUncountedSelections()
-        {
-            List<int> list = new List<int>();
-
-            foreach (KeyValuePair<int, Vote> v in votes)
-            {
-                if (v.Value == Vote.Uncounted)
-                    list.Add(v.Key);
-            }
-
-            StringBuilder sb = new StringBuilder();
-            foreach (int curr in list)
-            {
-                sb.Append(String.Format("no{0}", curr));
-                if (curr != list.Last())
-                {
-                    sb.Append(" ");
-                }
-            }
-
-            return sb.ToString();
         }
     }
 }

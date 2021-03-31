@@ -39,7 +39,7 @@ namespace SecureBallot
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 33);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(320, 23);
+            this.progressBar1.Size = new System.Drawing.Size(440, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             // 
@@ -48,9 +48,9 @@ namespace SecureBallot
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 17);
+            this.label1.Size = new System.Drawing.Size(199, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Verifying Voter Identify";
+            this.label1.Text = "Verifying Secure Connection...";
             // 
             // timer1
             // 
@@ -60,11 +60,11 @@ namespace SecureBallot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 80);
+            this.ClientSize = new System.Drawing.Size(464, 80);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Name = "SecureBallotVerification";
-            this.Text = "SecureBallotVerification";
+            this.Text = "SecureBallot Verification";
             this.Load += new System.EventHandler(this.SecureBallotVerification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

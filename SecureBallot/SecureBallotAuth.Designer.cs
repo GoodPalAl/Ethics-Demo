@@ -56,6 +56,7 @@ namespace SecureBallot
             this.tb_terms.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tb_terms.Size = new System.Drawing.Size(383, 250);
             this.tb_terms.TabIndex = 0;
+            this.tb_terms.TabStop = false;
             // 
             // label1
             // 
@@ -87,6 +88,7 @@ namespace SecureBallot
             this.tb_firstName.Name = "tb_firstName";
             this.tb_firstName.Size = new System.Drawing.Size(272, 22);
             this.tb_firstName.TabIndex = 3;
+            this.tb_firstName.TabStop = false;
             this.tb_firstName.TextChanged += new System.EventHandler(this.tb_firstName_TextChanged);
             // 
             // tb_lastName
@@ -95,6 +97,7 @@ namespace SecureBallot
             this.tb_lastName.Name = "tb_lastName";
             this.tb_lastName.Size = new System.Drawing.Size(272, 22);
             this.tb_lastName.TabIndex = 4;
+            this.tb_lastName.TabStop = false;
             this.tb_lastName.TextChanged += new System.EventHandler(this.tb_lastName_TextChanged);
             // 
             // label2
@@ -141,6 +144,7 @@ namespace SecureBallot
             this.dtp_DOB.Name = "dtp_DOB";
             this.dtp_DOB.Size = new System.Drawing.Size(272, 22);
             this.dtp_DOB.TabIndex = 9;
+            this.dtp_DOB.TabStop = false;
             this.dtp_DOB.Value = new System.DateTime(2021, 3, 29, 0, 0, 0, 0);
             this.dtp_DOB.ValueChanged += new System.EventHandler(this.dtp_DOB_ValueChanged);
             // 
@@ -150,8 +154,10 @@ namespace SecureBallot
             this.button_browse.Name = "button_browse";
             this.button_browse.Size = new System.Drawing.Size(88, 25);
             this.button_browse.TabIndex = 10;
+            this.button_browse.TabStop = false;
             this.button_browse.Text = "Browse...";
             this.button_browse.UseVisualStyleBackColor = true;
+            this.button_browse.Visible = false;
             this.button_browse.Click += new System.EventHandler(this.button_browse_Click);
             // 
             // tb_photo_id
@@ -161,8 +167,10 @@ namespace SecureBallot
             this.tb_photo_id.ReadOnly = true;
             this.tb_photo_id.Size = new System.Drawing.Size(178, 22);
             this.tb_photo_id.TabIndex = 11;
+            this.tb_photo_id.TabStop = false;
             this.tb_photo_id.Text = "No file uploaded";
             this.tb_photo_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_photo_id.Visible = false;
             // 
             // label5
             // 
@@ -172,6 +180,7 @@ namespace SecureBallot
             this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Photo ID";
+            this.label5.Visible = false;
             // 
             // groupBox1
             // 

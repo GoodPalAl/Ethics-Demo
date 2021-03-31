@@ -35,7 +35,8 @@ namespace SecureBallot
         private void allowClick()
         {
             if (tb_firstName.Text != "" && tb_lastName.Text != "" &&
-                dob_submitted && photo_submitted)
+                //photo_submitted && 
+                dob_submitted)
             {
                 cb_tos_agreement.Enabled = true;
             }

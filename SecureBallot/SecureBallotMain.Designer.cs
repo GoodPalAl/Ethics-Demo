@@ -29,212 +29,188 @@ namespace SecureBallot
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_no1 = new System.Windows.Forms.TextBox();
-            this.rb_no1_yes = new System.Windows.Forms.RadioButton();
-            this.rb_no1_no = new System.Windows.Forms.RadioButton();
+            this.rb_mayor1 = new System.Windows.Forms.RadioButton();
+            this.rb_mayor2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rb_mayor3 = new System.Windows.Forms.RadioButton();
+            this.rb_mayor4 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rb_no2_yes = new System.Windows.Forms.RadioButton();
-            this.rb_no2_no = new System.Windows.Forms.RadioButton();
-            this.tb_no2 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.rb_no4_yes = new System.Windows.Forms.RadioButton();
-            this.rb_no4_no = new System.Windows.Forms.RadioButton();
-            this.tb_no4 = new System.Windows.Forms.TextBox();
+            this.rb_cm3 = new System.Windows.Forms.RadioButton();
+            this.rb_cm4 = new System.Windows.Forms.RadioButton();
+            this.rb_cm1 = new System.Windows.Forms.RadioButton();
+            this.rb_cm2 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rb_no3_yes = new System.Windows.Forms.RadioButton();
-            this.rb_no3_no = new System.Windows.Forms.RadioButton();
-            this.tb_no3 = new System.Windows.Forms.TextBox();
+            this.rb_rq_yes = new System.Windows.Forms.RadioButton();
+            this.rb_rq_no = new System.Windows.Forms.RadioButton();
+            this.tb_ref_ques = new System.Windows.Forms.TextBox();
             this.button_cast_vote = new System.Windows.Forms.Button();
+            this.button_clear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tb_no1
+            // rb_mayor1
             // 
-            this.tb_no1.Location = new System.Drawing.Point(13, 3);
-            this.tb_no1.Multiline = true;
-            this.tb_no1.Name = "tb_no1";
-            this.tb_no1.ReadOnly = true;
-            this.tb_no1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_no1.Size = new System.Drawing.Size(332, 168);
-            this.tb_no1.TabIndex = 2;
+            this.rb_mayor1.AutoSize = true;
+            this.rb_mayor1.Location = new System.Drawing.Point(6, 51);
+            this.rb_mayor1.Name = "rb_mayor1";
+            this.rb_mayor1.Size = new System.Drawing.Size(129, 21);
+            this.rb_mayor1.TabIndex = 3;
+            this.rb_mayor1.Text = "Matthew Mercer";
+            this.rb_mayor1.UseVisualStyleBackColor = true;
+            this.rb_mayor1.CheckedChanged += new System.EventHandler(this.rb_mayor1_CheckedChanged);
             // 
-            // rb_no1_yes
+            // rb_mayor2
             // 
-            this.rb_no1_yes.AutoSize = true;
-            this.rb_no1_yes.Location = new System.Drawing.Point(6, 51);
-            this.rb_no1_yes.Name = "rb_no1_yes";
-            this.rb_no1_yes.Size = new System.Drawing.Size(53, 21);
-            this.rb_no1_yes.TabIndex = 3;
-            this.rb_no1_yes.TabStop = true;
-            this.rb_no1_yes.Text = "Yes";
-            this.rb_no1_yes.UseVisualStyleBackColor = true;
-            this.rb_no1_yes.CheckedChanged += new System.EventHandler(this.rb_no1_yes_CheckedChanged);
-            // 
-            // rb_no1_no
-            // 
-            this.rb_no1_no.AutoSize = true;
-            this.rb_no1_no.Location = new System.Drawing.Point(6, 79);
-            this.rb_no1_no.Name = "rb_no1_no";
-            this.rb_no1_no.Size = new System.Drawing.Size(47, 21);
-            this.rb_no1_no.TabIndex = 4;
-            this.rb_no1_no.TabStop = true;
-            this.rb_no1_no.Text = "No";
-            this.rb_no1_no.UseVisualStyleBackColor = true;
-            this.rb_no1_no.CheckedChanged += new System.EventHandler(this.rb_no1_no_CheckedChanged);
+            this.rb_mayor2.AutoSize = true;
+            this.rb_mayor2.Location = new System.Drawing.Point(6, 79);
+            this.rb_mayor2.Name = "rb_mayor2";
+            this.rb_mayor2.Size = new System.Drawing.Size(117, 21);
+            this.rb_mayor2.TabIndex = 4;
+            this.rb_mayor2.Text = "John Mulaney";
+            this.rb_mayor2.UseVisualStyleBackColor = true;
+            this.rb_mayor2.CheckedChanged += new System.EventHandler(this.rb_mayor2_CheckedChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rb_no1_yes);
-            this.groupBox1.Controls.Add(this.rb_no1_no);
-            this.groupBox1.Location = new System.Drawing.Point(351, 12);
+            this.groupBox1.Controls.Add(this.rb_mayor3);
+            this.groupBox1.Controls.Add(this.rb_mayor4);
+            this.groupBox1.Controls.Add(this.rb_mayor1);
+            this.groupBox1.Controls.Add(this.rb_mayor2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(222, 159);
+            this.groupBox1.Size = new System.Drawing.Size(275, 150);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vote Selection for No1";
+            this.groupBox1.Text = "Tampa Mayor";
+            // 
+            // rb_mayor3
+            // 
+            this.rb_mayor3.AutoSize = true;
+            this.rb_mayor3.Location = new System.Drawing.Point(141, 51);
+            this.rb_mayor3.Name = "rb_mayor3";
+            this.rb_mayor3.Size = new System.Drawing.Size(98, 21);
+            this.rb_mayor3.TabIndex = 5;
+            this.rb_mayor3.Text = "Emily Blunt";
+            this.rb_mayor3.UseVisualStyleBackColor = true;
+            this.rb_mayor3.CheckedChanged += new System.EventHandler(this.rb_mayor3_CheckedChanged);
+            // 
+            // rb_mayor4
+            // 
+            this.rb_mayor4.AutoSize = true;
+            this.rb_mayor4.Location = new System.Drawing.Point(141, 79);
+            this.rb_mayor4.Name = "rb_mayor4";
+            this.rb_mayor4.Size = new System.Drawing.Size(94, 21);
+            this.rb_mayor4.TabIndex = 6;
+            this.rb_mayor4.Text = "Gal Gadot";
+            this.rb_mayor4.UseVisualStyleBackColor = true;
+            this.rb_mayor4.CheckedChanged += new System.EventHandler(this.rb_mayor4_CheckedChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rb_no2_yes);
-            this.groupBox2.Controls.Add(this.rb_no2_no);
-            this.groupBox2.Location = new System.Drawing.Point(351, 177);
+            this.groupBox2.Controls.Add(this.rb_cm3);
+            this.groupBox2.Controls.Add(this.rb_cm4);
+            this.groupBox2.Controls.Add(this.rb_cm1);
+            this.groupBox2.Controls.Add(this.rb_cm2);
+            this.groupBox2.Location = new System.Drawing.Point(293, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(222, 159);
+            this.groupBox2.Size = new System.Drawing.Size(275, 150);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vote Selection for No2";
+            this.groupBox2.Text = "Council Member District 4";
             // 
-            // rb_no2_yes
+            // rb_cm3
             // 
-            this.rb_no2_yes.AutoSize = true;
-            this.rb_no2_yes.Location = new System.Drawing.Point(6, 51);
-            this.rb_no2_yes.Name = "rb_no2_yes";
-            this.rb_no2_yes.Size = new System.Drawing.Size(53, 21);
-            this.rb_no2_yes.TabIndex = 3;
-            this.rb_no2_yes.TabStop = true;
-            this.rb_no2_yes.Text = "Yes";
-            this.rb_no2_yes.UseVisualStyleBackColor = true;
-            this.rb_no2_yes.CheckedChanged += new System.EventHandler(this.rb_no2_yes_CheckedChanged);
+            this.rb_cm3.AutoSize = true;
+            this.rb_cm3.Location = new System.Drawing.Point(134, 51);
+            this.rb_cm3.Name = "rb_cm3";
+            this.rb_cm3.Size = new System.Drawing.Size(117, 21);
+            this.rb_cm3.TabIndex = 5;
+            this.rb_cm3.Text = "Jason Mamoa";
+            this.rb_cm3.UseVisualStyleBackColor = true;
+            this.rb_cm3.CheckedChanged += new System.EventHandler(this.rb_cm3_CheckedChanged);
             // 
-            // rb_no2_no
+            // rb_cm4
             // 
-            this.rb_no2_no.AutoSize = true;
-            this.rb_no2_no.Location = new System.Drawing.Point(6, 79);
-            this.rb_no2_no.Name = "rb_no2_no";
-            this.rb_no2_no.Size = new System.Drawing.Size(47, 21);
-            this.rb_no2_no.TabIndex = 4;
-            this.rb_no2_no.TabStop = true;
-            this.rb_no2_no.Text = "No";
-            this.rb_no2_no.UseVisualStyleBackColor = true;
-            this.rb_no2_no.CheckedChanged += new System.EventHandler(this.rb_no2_no_CheckedChanged);
+            this.rb_cm4.AutoSize = true;
+            this.rb_cm4.Location = new System.Drawing.Point(134, 79);
+            this.rb_cm4.Name = "rb_cm4";
+            this.rb_cm4.Size = new System.Drawing.Size(124, 21);
+            this.rb_cm4.TabIndex = 6;
+            this.rb_cm4.Text = "Emma Wattson";
+            this.rb_cm4.UseVisualStyleBackColor = true;
+            this.rb_cm4.CheckedChanged += new System.EventHandler(this.rb_cm4_CheckedChanged);
             // 
-            // tb_no2
+            // rb_cm1
             // 
-            this.tb_no2.Location = new System.Drawing.Point(13, 178);
-            this.tb_no2.Multiline = true;
-            this.tb_no2.Name = "tb_no2";
-            this.tb_no2.ReadOnly = true;
-            this.tb_no2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_no2.Size = new System.Drawing.Size(332, 158);
-            this.tb_no2.TabIndex = 6;
+            this.rb_cm1.AutoSize = true;
+            this.rb_cm1.Location = new System.Drawing.Point(6, 51);
+            this.rb_cm1.Name = "rb_cm1";
+            this.rb_cm1.Size = new System.Drawing.Size(122, 21);
+            this.rb_cm1.TabIndex = 3;
+            this.rb_cm1.Text = "Keanu Reeves";
+            this.rb_cm1.UseVisualStyleBackColor = true;
+            this.rb_cm1.CheckedChanged += new System.EventHandler(this.rb_cm1_CheckedChanged);
             // 
-            // groupBox4
+            // rb_cm2
             // 
-            this.groupBox4.Controls.Add(this.rb_no4_yes);
-            this.groupBox4.Controls.Add(this.rb_no4_no);
-            this.groupBox4.Location = new System.Drawing.Point(351, 507);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(222, 159);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Vote Selection for No4";
-            // 
-            // rb_no4_yes
-            // 
-            this.rb_no4_yes.AutoSize = true;
-            this.rb_no4_yes.Location = new System.Drawing.Point(6, 51);
-            this.rb_no4_yes.Name = "rb_no4_yes";
-            this.rb_no4_yes.Size = new System.Drawing.Size(53, 21);
-            this.rb_no4_yes.TabIndex = 3;
-            this.rb_no4_yes.TabStop = true;
-            this.rb_no4_yes.Text = "Yes";
-            this.rb_no4_yes.UseVisualStyleBackColor = true;
-            this.rb_no4_yes.CheckedChanged += new System.EventHandler(this.rb_no4_yes_CheckedChanged);
-            // 
-            // rb_no4_no
-            // 
-            this.rb_no4_no.AutoSize = true;
-            this.rb_no4_no.Location = new System.Drawing.Point(6, 79);
-            this.rb_no4_no.Name = "rb_no4_no";
-            this.rb_no4_no.Size = new System.Drawing.Size(47, 21);
-            this.rb_no4_no.TabIndex = 4;
-            this.rb_no4_no.TabStop = true;
-            this.rb_no4_no.Text = "No";
-            this.rb_no4_no.UseVisualStyleBackColor = true;
-            this.rb_no4_no.CheckedChanged += new System.EventHandler(this.rb_no4_no_CheckedChanged);
-            // 
-            // tb_no4
-            // 
-            this.tb_no4.Location = new System.Drawing.Point(13, 508);
-            this.tb_no4.Multiline = true;
-            this.tb_no4.Name = "tb_no4";
-            this.tb_no4.ReadOnly = true;
-            this.tb_no4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_no4.Size = new System.Drawing.Size(332, 159);
-            this.tb_no4.TabIndex = 10;
+            this.rb_cm2.AutoSize = true;
+            this.rb_cm2.Location = new System.Drawing.Point(6, 79);
+            this.rb_cm2.Name = "rb_cm2";
+            this.rb_cm2.Size = new System.Drawing.Size(113, 21);
+            this.rb_cm2.TabIndex = 4;
+            this.rb_cm2.Text = "Johnny Depp";
+            this.rb_cm2.UseVisualStyleBackColor = true;
+            this.rb_cm2.CheckedChanged += new System.EventHandler(this.rb_cm2_CheckedChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.rb_no3_yes);
-            this.groupBox3.Controls.Add(this.rb_no3_no);
-            this.groupBox3.Location = new System.Drawing.Point(351, 342);
+            this.groupBox3.Controls.Add(this.rb_rq_yes);
+            this.groupBox3.Controls.Add(this.rb_rq_no);
+            this.groupBox3.Location = new System.Drawing.Point(293, 168);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(222, 159);
+            this.groupBox3.Size = new System.Drawing.Size(275, 150);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Vote Selection for No3";
+            this.groupBox3.Text = "Referendum Question";
             // 
-            // rb_no3_yes
+            // rb_rq_yes
             // 
-            this.rb_no3_yes.AutoSize = true;
-            this.rb_no3_yes.Location = new System.Drawing.Point(6, 51);
-            this.rb_no3_yes.Name = "rb_no3_yes";
-            this.rb_no3_yes.Size = new System.Drawing.Size(53, 21);
-            this.rb_no3_yes.TabIndex = 3;
-            this.rb_no3_yes.TabStop = true;
-            this.rb_no3_yes.Text = "Yes";
-            this.rb_no3_yes.UseVisualStyleBackColor = true;
-            this.rb_no3_yes.CheckedChanged += new System.EventHandler(this.rb_no3_yes_CheckedChanged);
+            this.rb_rq_yes.AutoSize = true;
+            this.rb_rq_yes.Location = new System.Drawing.Point(6, 51);
+            this.rb_rq_yes.Name = "rb_rq_yes";
+            this.rb_rq_yes.Size = new System.Drawing.Size(53, 21);
+            this.rb_rq_yes.TabIndex = 3;
+            this.rb_rq_yes.Text = "Yes";
+            this.rb_rq_yes.UseVisualStyleBackColor = true;
+            this.rb_rq_yes.CheckedChanged += new System.EventHandler(this.rb_rq_yes_CheckedChanged);
             // 
-            // rb_no3_no
+            // rb_rq_no
             // 
-            this.rb_no3_no.AutoSize = true;
-            this.rb_no3_no.Location = new System.Drawing.Point(6, 79);
-            this.rb_no3_no.Name = "rb_no3_no";
-            this.rb_no3_no.Size = new System.Drawing.Size(47, 21);
-            this.rb_no3_no.TabIndex = 4;
-            this.rb_no3_no.TabStop = true;
-            this.rb_no3_no.Text = "No";
-            this.rb_no3_no.UseVisualStyleBackColor = true;
-            this.rb_no3_no.CheckedChanged += new System.EventHandler(this.rb_no3_no_CheckedChanged);
+            this.rb_rq_no.AutoSize = true;
+            this.rb_rq_no.Location = new System.Drawing.Point(6, 79);
+            this.rb_rq_no.Name = "rb_rq_no";
+            this.rb_rq_no.Size = new System.Drawing.Size(47, 21);
+            this.rb_rq_no.TabIndex = 4;
+            this.rb_rq_no.Text = "No";
+            this.rb_rq_no.UseVisualStyleBackColor = true;
+            this.rb_rq_no.CheckedChanged += new System.EventHandler(this.rb_rq_no_CheckedChanged);
             // 
-            // tb_no3
+            // tb_ref_ques
             // 
-            this.tb_no3.Location = new System.Drawing.Point(13, 343);
-            this.tb_no3.Multiline = true;
-            this.tb_no3.Name = "tb_no3";
-            this.tb_no3.ReadOnly = true;
-            this.tb_no3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_no3.Size = new System.Drawing.Size(332, 159);
-            this.tb_no3.TabIndex = 8;
+            this.tb_ref_ques.Location = new System.Drawing.Point(12, 168);
+            this.tb_ref_ques.Multiline = true;
+            this.tb_ref_ques.Name = "tb_ref_ques";
+            this.tb_ref_ques.ReadOnly = true;
+            this.tb_ref_ques.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_ref_ques.Size = new System.Drawing.Size(275, 150);
+            this.tb_ref_ques.TabIndex = 8;
+            this.tb_ref_ques.TabStop = false;
             // 
             // button_cast_vote
             // 
-            this.button_cast_vote.Location = new System.Drawing.Point(239, 673);
+            this.button_cast_vote.Location = new System.Drawing.Point(293, 324);
             this.button_cast_vote.Name = "button_cast_vote";
             this.button_cast_vote.Size = new System.Drawing.Size(92, 50);
             this.button_cast_vote.TabIndex = 12;
@@ -242,20 +218,27 @@ namespace SecureBallot
             this.button_cast_vote.UseVisualStyleBackColor = true;
             this.button_cast_vote.Click += new System.EventHandler(this.button_cast_vote_Click);
             // 
+            // button_clear
+            // 
+            this.button_clear.Location = new System.Drawing.Point(195, 324);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(92, 50);
+            this.button_clear.TabIndex = 13;
+            this.button_clear.Text = "Clear";
+            this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
+            // 
             // SecureBallotMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 732);
+            this.ClientSize = new System.Drawing.Size(582, 380);
+            this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_cast_vote);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.tb_no4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.tb_no3);
+            this.Controls.Add(this.tb_ref_ques);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.tb_no2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tb_no1);
             this.Name = "SecureBallotMain";
             this.Text = "SecureBallot - Voting in Progress";
             this.Load += new System.EventHandler(this.SecureBallotMain_Load);
@@ -263,8 +246,6 @@ namespace SecureBallot
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -273,22 +254,21 @@ namespace SecureBallot
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tb_no1;
-        private System.Windows.Forms.RadioButton rb_no1_yes;
-        private System.Windows.Forms.RadioButton rb_no1_no;
+        private System.Windows.Forms.RadioButton rb_mayor1;
+        private System.Windows.Forms.RadioButton rb_mayor2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton rb_no2_yes;
-        private System.Windows.Forms.RadioButton rb_no2_no;
-        private System.Windows.Forms.TextBox tb_no2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton rb_no4_yes;
-        private System.Windows.Forms.RadioButton rb_no4_no;
-        private System.Windows.Forms.TextBox tb_no4;
+        private System.Windows.Forms.RadioButton rb_cm1;
+        private System.Windows.Forms.RadioButton rb_cm2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rb_no3_yes;
-        private System.Windows.Forms.RadioButton rb_no3_no;
-        private System.Windows.Forms.TextBox tb_no3;
+        private System.Windows.Forms.RadioButton rb_rq_yes;
+        private System.Windows.Forms.RadioButton rb_rq_no;
+        private System.Windows.Forms.TextBox tb_ref_ques;
         private System.Windows.Forms.Button button_cast_vote;
+        private System.Windows.Forms.RadioButton rb_mayor3;
+        private System.Windows.Forms.RadioButton rb_mayor4;
+        private System.Windows.Forms.RadioButton rb_cm3;
+        private System.Windows.Forms.RadioButton rb_cm4;
+        private System.Windows.Forms.Button button_clear;
     }
 }

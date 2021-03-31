@@ -41,7 +41,13 @@ namespace SecureBallot
                 timer1.Stop();
                 timer1.Enabled = false;
 
-                MessageBox.Show("Your Identity has been verified! Please close this window to continue.");
+                MessageBox.Show(
+                    "Connection secured!\n" +
+                    "At this point in the final version of the program, " +
+                    "your webcam would turn on and we would ask you to hold up " +
+                    "your form of legal identification.\n" +
+                    "Instead, please simply close this window to continue."
+                );
 
                 this.Hide();
                 SecureBallotMain secureBallot = new SecureBallotMain();

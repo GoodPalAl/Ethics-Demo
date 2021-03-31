@@ -84,6 +84,7 @@
     <EmbeddedResource Include="SecureBallotVerification.resx">
       <DependentUpon>SecureBallotVerification.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

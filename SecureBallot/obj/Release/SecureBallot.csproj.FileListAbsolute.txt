@@ -9,3 +9,4 @@ C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Release\SecureBallot.cspro
 C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Release\SecureBallot.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Release\SecureBallot.exe
 C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Release\SecureBallot.pdb
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Release\SecureBallot.csprojAssemblyReference.cache

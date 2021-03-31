@@ -1,0 +1,12 @@
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\bin\Debug\SecureBallot.exe.config
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\bin\Debug\SecureBallot.exe
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\bin\Debug\SecureBallot.pdb
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.csprojAssemblyReference.cache
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.SecureBallotAuth.resources
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.Properties.Resources.resources
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.SecureBallotMain.resources
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.SecureBallotVerification.resources
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.csproj.GenerateResource.cache
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.exe
+C:\Users\Owner\Documents\Ethics Demo\SecureBallot\obj\Debug\SecureBallot.pdb

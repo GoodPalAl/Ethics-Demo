@@ -7,10 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureBallot", "SecureBallo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2EFA849-6145-456C-BD16-44FFD1758780}"
 	ProjectSection(SolutionItems) = preProject
-		Item1.txt = Item1.txt
-		Item2.txt = Item2.txt
-		Item3.txt = Item3.txt
-		Item4.txt = Item4.txt
+		.editorconfig = .editorconfig
+		ItemRefQues.txt = ItemRefQues.txt
 		SecureBallotTermsandConditions.txt = SecureBallotTermsandConditions.txt
 		SecureBallotVPNInfo.txt = SecureBallotVPNInfo.txt
 	EndProjectSection
